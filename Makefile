@@ -2,6 +2,8 @@
 # Repo-specific variables
 # ---------------------------------
 
+IMAGE ?= plainsightai/openfilter-vizcal
+
 # Define these for consistency in the repo
 REPO_NAME ?= vizcal
 REPO_NAME_SNAKECASE ?= vizcal

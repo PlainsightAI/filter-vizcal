@@ -10,7 +10,7 @@ Visual Calibration release notes
 - Grant `id-token: write` so the shared release workflow can produce keyless (cosign) SBOM attestations.
 - Fix RELEASE.md header (removed the stray top-level `# v2.0.5` heading and the duplicated `# Changelog` / `## [Unreleased]` block).
 - Pin the Docker base image to `python:3.11.12-slim`.
-- Repair the corrupted `docker-compose.yaml` (LOG_LEVEL, volume mount, and port mappings garbled by a bad find-replace) and point compose utility images at `openfilter-{video-in,webvis}:1.2.1`.
+- Repair the corrupted `docker-compose.yaml` (LOG_LEVEL, volume mount, and port mappings garbled by a bad find-replace), point compose utility images at `openfilter-{video-in,webvis}:1.2.1`, and pin the filter's own image to the release version `openfilter-vizcal:2.0.6`.
 - Update dev-tooling floors and switch pinned versions to ranges.
 
 ## v2.0.5 - 2026-04-23

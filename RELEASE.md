@@ -1,25 +1,23 @@
-# v2.0.5
-
-## v2.0.5 - 2026-04-23
-
-### Changed
-- Bump openfilter SDK, align CI workflow with shared release gate (source-paths)
-
-- Fix release workflow secret names: `PYPI_API_TOKEN` → `PLAINSIGHT_PYPI_TOKEN`, `DOCKERHUB_TOKEN` → `DOCKERHUB_ACCESS_TOKEN` (org-level secret names). Without this the PyPI / Docker Hub tokens resolved to empty and no package has been published since the migration.
-- Bump openfilter dependency to `>=0.1.30`.
-
 # Changelog
 Visual Calibration release notes
 
 ## [Unreleased]
 
-### Changed
+## v2.0.6 - 2026-08-04
 
-- Bump openfilter to 1.1.0
-- Bump openfilter to 1.1.1
-- Bump openfilter to 1.1.2
-- Bump the openfilter dependency to 1.2.0
-- Bump the openfilter dependency to 1.2.1
+### Changed
+- Update `openfilter[all]` to `>=1.2.1`.
+- Grant `id-token: write` so the shared release workflow can produce keyless (cosign) SBOM attestations.
+- Fix RELEASE.md header (removed the stray top-level `# v2.0.5` heading and the duplicated `# Changelog` / `## [Unreleased]` block).
+- Pin the Docker base image to `python:3.11.12-slim`.
+- Repair the corrupted `docker-compose.yaml` (LOG_LEVEL, volume mount, and port mappings garbled by a bad find-replace), point compose utility images at `openfilter-{video-in,webvis}:1.2.1`, and pin the filter's own image to the release version `openfilter-vizcal:2.0.6`.
+- Update dev-tooling floors and switch pinned versions to ranges.
+
+## v2.0.5 - 2026-04-23
+
+### Changed
+- Update the openfilter dependency to `>=0.1.30`, and align the CI workflow with the shared release gate (source-paths).
+- Fix release workflow secret names: `PYPI_API_TOKEN` → `PLAINSIGHT_PYPI_TOKEN`, `DOCKERHUB_TOKEN` → `DOCKERHUB_ACCESS_TOKEN` (org-level secret names). Without this the PyPI / Docker Hub tokens resolved to empty and no package has been published since the migration.
 
 ## v2.0.4 - 2026-04-20
 
@@ -32,7 +30,7 @@ Visual Calibration release notes
 
 ### Changed
 - Add CI/CD workflows: create-release.yaml (Docker Hub publishing), ci.yaml (PR testing), security-scan.yaml
-- Bump openfilter dependency to >=0.1.27
+- Update openfilter dependency to >=0.1.27
 
 
 ## v2.0.2 - 2025-09-29

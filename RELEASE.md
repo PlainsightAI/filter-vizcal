@@ -3,10 +3,12 @@ Visual Calibration release notes
 
 ## [Unreleased]
 
+## v2.0.7 - 2026-08-10
+
 ### Changed
 
 - Build the image on `openfilter-base` (weekly apt-upgraded python-slim) instead of a stale `python:X.Y.Z-slim` pin, clearing the OS-package CVEs the pin carried.
-- Bump the openfilter dependency to 1.2.2
+- Update the openfilter dependency to 1.2.2
 
 ## v2.0.6 - 2026-08-04
 
@@ -30,13 +32,11 @@ Visual Calibration release notes
 - Remove redundant ci.yaml (shared workflow handles PR testing)
 - Add push + pull_request triggers to create-release.yaml
 
-
 ## v2.0.3 - 2026-04-15
 
 ### Changed
 - Add CI/CD workflows: create-release.yaml (Docker Hub publishing), ci.yaml (PR testing), security-scan.yaml
 - Update openfilter dependency to >=0.1.27
-
 
 ## v2.0.2 - 2025-09-29
 ### Changed

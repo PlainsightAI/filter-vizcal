@@ -63,7 +63,7 @@ After running the filter, you can view the results at:
 ## How to Run
 
 ### Prerequisites
-- Python 3.10 or higher
+- Python 3.11 or higher
 - OpenCV and other dependencies (see `pyproject.toml`)
 
 ### Installation

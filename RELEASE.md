@@ -3,6 +3,8 @@ Visual Calibration release notes
 
 ## [Unreleased]
 
+## v2.1.0 - 2026-11-24
+
 ### Changed
 
 - Bump the openfilter dependency to 1.5.0
